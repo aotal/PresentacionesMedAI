@@ -1,0 +1,96 @@
+---
+title: Datos en el ámbito de la salud
+author: "[Antonio Otal Palacín](antonio.otal@udl.cat)"
+institute: Hospital Universitari Arnau de Vilanova (Lleida)
+format: 
+    revealjs:
+        logo: 'img/logoudl.png'
+        footer: "[IAMED](https://cv.udl.cat/portal/site/100794-2324/tool/3d5c2c81-a50b-43ce-a0bf-ecbfd152350b)"
+        css: styles.css
+        number-sections: false
+        slide-number: false
+        center: false
+jupyter: medai   
+---
+
+## Índice
+
+-   Introducción
+-   Clasificación de los datos
+-   Privacidad y confidencialidad
+-   Registros electrónicos de salud
+-   Preprocesado de datos médicos
+-   Vectorizaciones (*Embeddings*)
+-   Radiómica (*Radiomics*)
+
+::: notes
+Notes
+:::
+
+# Introducción 
+
+::: notes
+Notes
+:::
+
+## Disponibilidad masiva de datos
+
+![](img/Intro1.jpg){fig-align="center"}
+
+
+## Machine learning
+
+![](img/Intro2.jpg){fig-align="center"}
+
+
+## Problema con los datos
+
+![](img/Intro3.jpg){fig-align="center"}
+
+
+# Clasificación de los datos
+
+## Por tipos de datos
+
+-   **Datos estructurados**: Datos organizados en tablas o matrices, como datos numéricos en
+una hoja de cálculo.
+-   **Datos no estructurados**: Datos que no tienen una forma predefinida de organización,
+como texto libre, imágenes, audio o video.
+-   **Datos semiestructurados**: Datos que tienen alguna estructura pero no encajan perfectamente
+en un formato tabular, como archivos XML o JSON.
+
+### Datos estructurados
+
+::: columns
+::: {.column width="50%"}
+
+```{python}
+import pandas as pd
+tb=pd.read_csv('tablas/apple_quality.csv')
+tb
+```
+
+
+:::
+
+::: {.column width="50%"}
+![](img/DatosEstructurados1.jpg)
+
+
+:::
+:::
+
+
+# Privacidad y confidencialidad
+
+
+# Registros electrónicos de salud
+
+
+# Preprocesado de datos médicos
+
+
+# Vectorizaciones (*Embeddings*)
+
+
+# Radiómica (*Radiomics*)
