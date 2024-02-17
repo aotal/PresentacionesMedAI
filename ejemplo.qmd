@@ -1,0 +1,597 @@
+---
+title: Applicator Reconstruction in Gynecological Brachytherapy on MRI
+subtitle: Interstitial Brachytherapy and Applicators Libraries
+author: "[Antonio Otal Palacín](aotalpalacin@gmail.com)"
+institute: Hospital Universitari Arnau de Vilanova (Lleida)
+format: 
+    revealjs:
+        logo: irimed.png
+        footer: "[IRIMED](http://www.uv.es/radiofisica/index.html)"
+        css: styles.css
+        number-sections: false
+        slide-number: false
+        center: false
+jupyter: quarto    
+---
+
+## Summary
+
+-   Brachytherapy
+-   Gynecological Brachytherapy
+-   Applicator reconstruction
+-   Contributions
+
+::: notes
+Notes
+:::
+
+# Brachytherapy 
+
+::: notes
+Implantes permanentes o temporales
+Como veremos isótopos de HDR (Co6 y Ir192)
+:::
+
+
+## Brachytherapy vs External Beam Radiotherapy (Tele-therapy)
+
+::: {layout-ncol="2"}
+![TrueBeam platform <br> Varian Medical Systems](img/TrueBeam.png)
+
+![MicroSelectron <br> Elekta](img/MicroSelectron.png){width="300"}
+:::
+
+::: notes
+Braquirerapia (fuente en el tumor o en su proximidad, teleterapia, haces normalmente de fotones (producidos po bremhstralung) pero también de electrones y hadrones, acelerados por campos eléctricos)
+:::
+
+## Brachytherapy modalities {auto-animate="true"}
+
+High-Dose Rate (HDR)
+
+Low-Dose Rate (LDR)
+
+Pulsed-Dose Rate (PDR)
+
+::: notes
+HDR Lo que nos ocupa
+LDR: Semillas de I o Pd (implantes permanentes)
+PDR alta energía pero baja tasa
+:::
+
+## Brachytherapy modalities {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+High-Dose Rate (HDR)
+:::
+
+::: notes
+Notes
+:::
+
+## Brachytherapy application
+
+::: columns
+::: {.column width="50%"}
+{{< video https://www.youtube.com/embed/hXDZ8aUN9-A?&start=35&end=68&autoplay=1&playlist=hXDZ8aUN9-A&loop=0&mute=1&hl=en&answer=140174 width="500" height="280" aspect-ratio="16x9" >}}
+
+Cavum
+:::
+
+::: {.column width="50%"}
+{{< video https://www.youtube.com/embed/6g4X8hAoFqM?&start=45&end=78&autoplay=1&playlist=6g4X8hAoFqM&loop=0&mute=1&hl=en&answer=140174 width="500" height="280" aspect-ratio="16x9" >}}
+
+Gynecological
+:::
+:::
+
+::: notes
+Hacer notar la parada de la fuente en los diferentes puntos
+:::
+
+## Source Positions
+
+![](img/PosicionesParada.jpg)
+
+::: notes
+Principio de superposición (hablar de los tiempos de parada)
+:::
+
+## Dose distribution
+
+::: {layout-ncol=2}
+
+![](img/DoseDistribution.png)
+
+![](img/Animation2Positions.gif)
+
+:::
+
+::: notes
+Sumando la dosis en cada punto conseguimos la isodosis que envuelve al tumor. Hacer notar que la dosis dentro del tumor no es homogenea (ley del cuadrado de la distancia)
+:::
+
+## Differences between intracavitary and interstitial brachytherapy
+
+::: columns
+
+::: {.column width="50%"}
+![Intracavitary brachytherapy](img/endocavitary.png){width="85%"}
+:::
+
+::: {.column width="50%"}
+![Interstitial brachytherapy](img/interstitial.jpg){width="54%"}
+:::
+:::
+
+::: notes
+Hablar de que puede estar mezclado (y de hecho es lo que se usa para los casos de cervix avanzados)
+:::
+
+
+## Brachytherapy workflow {auto-animate="true"}
+
+Image adquisition
+
+Contouring
+
+Reconstruction
+
+Dosimetry
+
+Treatment delivery
+
+::: notes
+-   Imaging: The process begins with imaging studies, such as CT (computed tomography) or MRI (magnetic resonance imaging), to visualize the tumor and surrounding structures accurately.
+
+-   Contouring: Radiation oncologists and medical physicists contour or delineate the tumor and nearby critical structures (organs at risk) on the imaging scans. This step helps in designing the treatment plan and ensuring accurate dose delivery.
+
+-   Reconstruction
+
+-   Dosimetry
+
+-   Radiation Delivery: The radioactive sources are temporarily inserted into the catheters or applicators, delivering a high dose of radiation to the tumor and surrounding tissues. The treatment is carefully controlled and monitored by the medical team.
+:::
+
+## Brachytherapy workflow {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+Reconstruction
+:::
+
+## Commons Locations {auto-animate="true"}
+
+Prostate
+
+Gynecological
+
+Breast
+
+Head and Neck
+
+Ophthalmic
+
+::: notes
+Notes
+:::
+
+## Commons Locations {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+Gynecological
+:::
+
+## The use of imaging in 3D brachytherapy
+
+- Ultrasound (US)
+- Computed tomography (CT)
+- Magnetic resonance imaging (MRI)
+
+::: notes
+Notes
+:::
+
+## Image registration
+
+- Rigid registration
+- Deformable registration
+
+::: notes
+El registro rígido es una transformación afín entre los dos orígenes de las secuencias de imágenes
+El deformable es además definir una métrica que recoja la deformación de una imagen respecto a la otra.
+Deformation model:These models capture the local deformations and shape variations observed between the images.
+:::
+
+
+# Gynecological Brachytherapy HDR
+
+::: notes
+Notes
+:::
+
+## Indications {auto-animate="true"}
+
+Cervical Cancer
+
+Endometrial Cancer
+
+Vaginal Cancer
+
+::: notes
+Notes
+:::
+
+## Indications {auto-animate="true"}
+
+::: {style="margin-top: 200px; font-size: 2em; color: red;"}
+Cervical Cancer
+:::
+
+## MRI golden standart
+
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/MRIMandatory.png)
+:::
+
+::: notes
+Recomiendan la MRI para la delineación de tumores y órganos de riesgo. En el caso del cervix es crucial para el tumor
+:::
+
+## MRI vs CT: Cervix
+
+::: {layout-ncol=2}
+
+![](img/CervixCT.png){width=85%}
+
+![](img/CervixMR.png){width=85%}
+
+:::
+
+## MRI vs CT: Applicator
+
+::: {layout-ncol=2}
+
+![](img/CTFletcher.JPG){width=85%}
+
+![](img/MRIFletcher.JPG){width=85%}
+
+:::
+
+::: notes
+Volver a comentar la solución del registro vs reconstrucción directa. Hay que recordar que la adquisición de imágenes no se hace en el mismo lugar ni al mismo tiempo.
+:::
+
+# Reconstruction in Brachytherapy
+
+::: notes
+Notes
+:::
+
+## Problem Statement
+
+::: columns
+
+::: {.column width="50%"}
+![](img/EsquemaLigadura.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](img/Gastro.png){width="100%"}
+:::
+:::
+
+- The problem is a conversion from 3D to 1D due to the constraints involved.
+- Most distal position as origin of l parameter.
+
+::: notes
+Buscar una transformación que ligue la posición de la fuente a través del parámetro l (thread lenght)
+:::
+
+## Impact on dose distribution
+::: columns
+
+::: {.column width="50%"}
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/EfectoIncertidumbrePosicionamiento.PNG)
+:::
+:::
+
+::: {.column width="50%"}
+DVH parameters
+
+- Bladder and rectum in ant-pos direction: 5%-6% per mm
+- Rest of organs and directions: 4% per mm 
+
+
+:::
+:::
+
+
+::: {.callout-warning}
+Systematic errors of a few millimetres can lead to significant deviations (More than 10%).
+:::
+
+::: notes
+Incidir en la importancia de la reconstrucción de los aplicadores
+:::
+
+
+
+## Direct Reconstruction (DR)
+
+The most distal stopping position (tip position) and the trajectory of the source on the image must be identified.
+
+### Pros
+
+- This is the most intuitive and straightforward way to do it.
+
+### Cons
+
+- Trajectory and/or tip position of the source may not be visible
+- Slice thickness 
+
+::: notes
+Hablar de pros y contras
+:::
+
+## Dummies CT
+
+::: {layout-ncol="2"}
+
+![](img/dummies.jpg)
+
+![](img/Dummies_bebig.jpg)
+
+
+:::
+
+::: notes
+Hechas de materiales de Z alto
+Son muy habituales y están codificadas para ver el primer punto de parada. Dificultad de cuando se cruzan dummies de varios canales y el artefacto a ser materiales de Z alto. 
+:::
+
+## Dummies MRI
+
+::: {layout-ncol="2"}
+
+
+::: {layout-nrow="2"}
+
+![](img/DummiesMR_Image.jpg)
+
+::: {.callout-caution}
+There are no commercial dummies for MRI compatible needles.
+:::
+
+:::
+
+::: {layout-nrow="2"}
+
+![](img/DummiesMR.png){width="50%"}
+
+![](img/DummiesPepe.png){width="50%"}
+
+:::
+
+:::
+
+::: notes
+Hechas de materiales con "hidrógenos"(Por la resonancia)
+Al ser líquidos, problemas de contrucción. De ahí la dificultad para las agujas.
+:::
+
+## Applicator Libraries (AP)
+
+![](img/AppLibraries.png){width="70%"}
+
+![](img/AppLUtrecht.png){width="70%"}
+
+::: notes
+Hablar de que son modelos 3D detallados y que por tanto si tenemos referencias de los mismos no necesitamos conocer los canales ni el primer punto de parada
+:::
+
+
+## Limitations
+
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/HellebustArticle.png)
+:::
+<q cite="https://pubmed.ncbi.nlm.nih.gov/20663578/">When using several rigid applicators each applicator should be imported separately,
+since there is a risk that the position of the applicators in relation
+to each other could change inside the patient.</q>
+
+::: notes
+Poner el ejemplo del aplicador Utrecht que está hecho de tres bloques
+No se contemplan las agujas
+:::
+
+## Plastic applicators
+
+::: {layout-ncol="2"}
+
+![](img/Geneva.jpg){width="100%"}
+
+![](img/Venecia.png){width="100%"}
+
+:::
+
+::: notes
+Notes
+:::
+
+## Metallic applicators (titanium)
+
+::: {layout-ncol="2"}
+
+![](img/FletcherReal3D.png){width="100%"}
+
+![](img/vienabebigfoto.png){width="100%"}
+
+:::
+
+::: notes
+Los canales de titanio apantallan las dummies
+:::
+
+## Artifacts
+
+![](img/ArtefactoTitanio.png){width="100%"}
+
+
+::: notes
+Hacer notar la dificultad de definir la punta. En las recomendaciones del paper anterior aconseja y al centro de la "bomba"
+:::
+
+# Contributions
+
+## Journal of Comtemporary Brachytherapy (2017 vol 1)
+
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/otal2017.PNG){width="100%"}
+:::
+
+## Journal of Comtemporary Brachytherapy (2017 vol 1)
+
+::: {layout-ncol="2"}
+![](img/JCB2017_1.jpg){width="100%"}
+![](img/JCB2017_3.jpg){width="75%"}
+
+![](img/JCB2017_2.jpg){width="100%"}
+![](img/JCB2017_4.png){width="100%"}
+![](img/Regla.png){width="50%"}
+:::
+
+::: notes
+Se añadieron las agujas y se usa el free-lenght. Del aplicador Benidorm hablamos en el pre-plan
+:::
+
+## Journal of Comtemporary Brachytherapy (2017 vol 2)
+
+::: {style="display: inline-block; border: 1px solid black; padding: 5px;"}
+![](img/rodriguez2017.PNG){width="100%"}
+:::
+
+## Journal of Comtemporary Brachytherapy (2017 vol 2)
+
+::: {layout-ncol="2"}
+![](img/JCB2017_pp_1.jpg){width="100%"}
+
+
+![](img/JCB2017_pp_2.jpg){width="100%"}
+:::
+
+::: notes
+El objetivo es hacer una dosimetría virtual para ver qué agujas se necesitan para cubrir el tumor
+Se hace una resonancia solamente con el cilindro para planificar las agujas y con una herramienta en java se compone el modelo
+:::
+
+## ALFIM2016
+
+::: {layout-ncol="2"}
+
+::: {layout-nrow="2"}
+
+![](img/viena2.png){width="100%"}
+
+![](img/viena3.jpg){width="100%"}
+
+:::
+
+::: {layout-nrow="2"}
+
+{{< video https://www.youtube.com/embed/8CICX-2W92Q?&autoplay=1&playlist=8CICX-2W92Q&loop=1&mute=1&hl=en&answer=140174 width="130" height="220" >}}
+
+![](img/viena1.png){width="100%"}
+
+:::
+:::
+
+
+::: notes
+Hablar de las bolas de Auxina. Que ya se usaron en el template Benidorm
+:::
+
+
+
+## ALFIM2016
+
+::: {layout-ncol="2"}
+
+![](img/VienaPellets1.JPG){width="100%"}
+![](img/VienaPellets2.JPG){width="100%"}
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+ImagenEntrada=trimesh.load('stl/VienaPellets.stl')
+ImagenEntrada.show()
+```
+
+:::
+
+
+::: notes
+Premio en Argentina
+:::
+
+
+## AAPM2019
+
+Characterization of a Gynaecological Titanium Applicator for Direct Reconstruction on MRI
+
+::: {layout-ncol="2"}
+![](img/D3.png){width="100%"}
+![](img/D2.png){width="100%"}
+
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+ImagenEntrada=trimesh.load('stl/Fletcher.stl')
+ImagenEntrada.show()
+```
+:::
+
+::: notes
+Explicar el intento de parametrizar el aplicador para convertirlo en rígido. Volver sobre el concepto de semirígidos.
+:::
+
+## AAPM2019
+
+Novel Semi-Automatic Reconstruction Method for Plastic Gynaecological Applicators
+
+::: {layout-ncol="2"}
+![](img/AAPM2019.png){width="100%"}
+
+
+```{python}
+import trimesh
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.path import Path
+ImagenEntrada=trimesh.load('stl/Utrecht20.stl')
+ImagenEntrada.show()
+```
+:::
+
+::: notes
+Hablar de como al dejar la clínica comencé a trabajar con 3DSlicer por no tener un TPS
+:::
+
+## ABS2021
+
+A novel tool for the reconstruction of the Utrecht applicator on MRI
+
+{{< video https://www.youtube.com/embed/kv827vIsAZM?&start=197&autoplay=1&playlist=kv827vIsAZM&loop=0&mute=1&hl=en&answer=140174 width="800" height="448" aspect-ratio="16x9" >}}
+
+::: notes
+Hablar a futuro de intentar utilizar la AI para automatizar completamente el proceso y obviar la parte de ajustar la parte intracavitaria
+:::
+
+# 
+
+<h1> Thank you for your attention </h1>
