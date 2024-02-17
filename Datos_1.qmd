@@ -10,7 +10,7 @@ format:
         number-sections: false
         slide-number: false
         center: false
-jupyter: medai   
+jupyter: python3   
 ---
 
 ## Índice
@@ -59,7 +59,7 @@ como texto libre, imágenes, audio o video.
 -   **Datos semiestructurados**: Datos que tienen alguna estructura pero no encajan perfectamente
 en un formato tabular, como archivos XML o JSON.
 
-### Datos estructurados
+## Datos estructurados
 
 ::: columns
 ::: {.column width="50%"}
