@@ -17,6 +17,7 @@ jupyter: python3
 
 -   Introducción
 -   Clasificación de los datos
+-   Anotación de datos
 -   Privacidad y confidencialidad
 -   Registros electrónicos de salud
 -   Preprocesado de datos médicos
@@ -197,13 +198,158 @@ médicos electrónicos (EHR) o resultados de pruebas de laboratorio.
 conjuntos de datos disponibles en repositorios públicos o bases de datos comerciales.
 
 
+::: notes
+Notes
+:::
+
+## Datos anotados vs no anotados
+
+- **Estructura semántica**: Los datos anotados tienen metadatos adicionales que proporcionan contexto y significado, como las etiquetas que marcan entidades nombradas.
+
+- **Interoperabilidad y procesabilidad**: Los datos anotados son más interoperables y procesables, lo que facilita su integración con otros sistemas y su procesamiento automatizado.
+
+- **Facilidad de búsqueda y recuperación**: Los datos anotados son más fáciles de buscar y recuperar, ya que las anotaciones permiten identificar elementos específicos.
+  
+
+::: notes
+Notes
+:::
+
+# Anotación de datos
+
+![](https://www.shaip.com/wp-content/uploads/2023/05/Data-Annotation-New-Images-03.jpg)
+
+## ¿Qué es la anotación de datos?
+
+La anotación de datos es el proceso de atribución o etiquetado de datos para ayudar a los algoritmos de aprendizaje automático a comprender y clasificar la información que procesan.
+
+-   Texto
+-   Imágenes
+-   Audio
+-   Video
+  
+
+
+## Anotación de imágenes
+
+::: columns
+::: {.column width="50%"}
+- Clasificación
+- Reconocimiento/Detección
+- Segmentación
+
+
+
+:::
+
+::: {.column width="50%"}
+![](https://www.shaip.com/wp-content/uploads/2021/08/page-8-1.jpg)
+
+
+:::
+:::
+
+
+## Anotación de audio
+
+
+![](https://macgence.com/wp-content/uploads/2023/08/Audio-Annotation-801x299.webp)
+
+
+
+## Anotación de video
+
+![](https://www.shaip.com/wp-content/uploads/2022/02/page-3.jpg)
+
+
+## Anotación de texto
+
+::: columns
+::: {.column width="50%"}
+- Semántica
+- Intención
+- Opinión
+
+
+
+:::
+
+::: {.column width="50%"}
+![](https://www.datasciencecentral.com/wp-content/uploads/2021/10/9489155876.png)
+
+:::
+:::
+
 # Privacidad y confidencialidad
 
+![](img/RGPD.png)
 
-# Registros electrónicos de salud
+# Registros electrónicos de salud (EHR)
 
+## Antecedentes
+
+::: columns
+::: {.column width="50%"}
+![](img/HistoriaClinica1.jpg)
+
+
+
+:::
+
+::: {.column width="50%"}
+![](img/HistoriaClinica2.jpg)
+
+
+:::
+:::
+
+
+
+::: notes
+Notes
+:::
+
+## Problemas de la historia clínica en papel
+
+- Accesibilidad limitada
+
+- Riesgo de pérdida o daño
+
+- Dificultad para mantener actualizada la información
+  
+- Espacio de almacenamiento y organización
+
+- Limitaciones en la compartición y colaboración
+
+::: notes
+Notes
+:::
+
+## Componentes de los EHR
+
+- Módulos de Registro y Documentación
+
+- Pedidos y Resultados de laboratorio
+
+- Gestión de Medicamentos
+  
+- Integración de Imágenes Médicas (PACS)
+
+
+::: notes
+Notes
+:::
 
 # Preprocesado de datos médicos
+
+![](img/ProcesadoDeDatos1.png)
+
+::: notes
+Notes
+:::
+
+## Recopilación de Datos
+
 
 
 # Vectorizaciones (*Embeddings*)
