@@ -2,6 +2,7 @@
 title: Datos en el ámbito de la salud
 author: "[Antonio Otal Palacín](antonio.otal@udl.cat)"
 institute: Hospital Universitari Arnau de Vilanova (Lleida)
+lang: es
 format: 
     revealjs:
         logo: 'img/logoudl.png'
@@ -282,7 +283,7 @@ La anotación de datos es el proceso de atribución o etiquetado de datos para a
 
 # Privacidad y confidencialidad
 
-![](img/RGPD.png)
+![](img/RGPD.png){fig-align="center"}
 
 # Registros electrónicos de salud (EHR)
 
@@ -342,17 +343,163 @@ Notes
 
 # Preprocesado de datos médicos
 
-![](img/ProcesadoDeDatos1.png)
+![](img/ProcesadoDeDatos1.png){fig-align="center"}
 
 ::: notes
 Notes
 :::
 
-## Recopilación de Datos
+## Limpieza de datos
 
+- Eliminación de observaciones incompletas
+- Imputación de valores
+- Análisis de patrones de datos faltantes
+- Uso de modelos predictivos
+- Técnicas de imputación múltiple
+
+::: notes
+Notes
+:::
+
+## Normalización de variables continuas
+
+- Las variables continuas pueden tener diferentes escalas y rangos de valores
+- La normalización ayuda a mitigar este problema al transformar las variables para que estén
+en una escala similar
+
+::: notes
+Notes
+:::
+
+## Técnicas de normalización
+
+- Datos con una media de 0 y desviación estándar 1
+- Normalización min-max (0-1)
+- Puede mejorar la convergencia
+
+::: {.callout-warning}
+
+Es importante aplicar la misma transformación de normalización tanto al conjunto de entrenamiento
+como al conjunto de prueba para evitar sesgos en los datos.
+
+:::
+
+::: notes
+Notes
+:::
+
+## Integración de datos
+
+- Fuentes de Datos Diversas
+- Resolución de inconsistencias
+- Limpieza de Datos
+- Gestión de Datos Temporales
+
+::: notes
+Notes
+:::
+
+## La ingeniería de características
+
+- Creación de Nuevas características
+- Selección de Características Relevantes
+
+::: notes
+Por ejemplo el índice de masa corporal
+:::
+
+## Anonimización de los datos
+
+- La anonimización es el proceso de eliminar o modificar datos personales de tal manera que ya
+no sea posible identificar a un individuo a partir de los datos.
+
+- La anonimización está vinculada a lo que dicen las leyes de protección de datos en la UE (RGPD)
+
+::: notes
+Notes
+:::
+
+## Técnicas de anonimización
+
+- Eliminación de identificadores directos
+- Pseudonimización
+- Enmascaramiento
+- Agregación
+
+::: notes
+Notes
+:::
+
+## Consideraciones al elegir una técnica de anonimización
+
+- El tipo de datos que se procesan
+- El nivel de riesgo de reidentificación
+- Los fines para los que se utilizarán los datos anonimizados
+
+::: notes
+Notes
+:::
+
+## *Data Augmentation*
+
+Es una técnica que consiste en crear nuevas muestras de datos a partir de datos existentes.
+Estas nuevas muestras se generan mediante la aplicación de transformaciones predefinidas a
+los datos originales
+
+![](https://dawn.cs.stanford.edu/assets/img/2017-08-11-tanda/data_aug_basic.png)
+
+::: notes
+Notes
+:::
+
+## Ventajas de *Data Augmentation*
+
+- Aumenta el tamaño del conjunto de datos
+- Mejora la generalización del modelo
+- Reduce el sesgo del modelo
+
+::: notes
+Notes
+:::
+
+## *Data Augmentation* en imágenes médicas
+
+- Rotaciones
+- Zoom
+- Cambio de contraste
+- Adición de ruido
+- Simulación de artefactos
+
+::: notes
+Notes
+:::
+
+## *Data Augmentation* en señales biomédicas
+
+Como el Electrocardiograma o el Electroencefalograma
+
+- Adición de ruido
+- Cambio de escala
+- Segmentación de señales
+- Simulación de artefactos
 
 
 # Vectorizaciones (*Embeddings*)
 
+## Ángulo entre dos vectores
+
+![](https://www.mathsisfun.com/algebra/images/dot-product-ex2.gif){fig-align="center"}
+
+## ¿Qué son las vectorizaciones?
+
+![](https://daleonai.com/images/word2vec.png){fig-align="center"}
+
+## Práctica
+
+https://colab.research.google.com/drive/1zR8uurhFbOVdVFNsrgWqiOPvpfHq82MK?usp=sharing
 
 # Radiómica (*Radiomics*)
+
+# Estándar DICOM
+
+## 

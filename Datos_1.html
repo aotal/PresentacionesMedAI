@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="es"><head>
 <script src="Datos_1_files/libs/clipboard/clipboard.min.js"></script>
 <script src="Datos_1_files/libs/quarto-html/tabby.min.js"></script>
 <script src="Datos_1_files/libs/quarto-html/popper.min.js"></script>
@@ -867,7 +867,7 @@
 <section id="privacidad-y-confidencialidad" class="title-slide slide level1 center">
 <h1>Privacidad y confidencialidad</h1>
 
-<img data-src="img/RGPD.png" class="r-stretch"></section>
+<img data-src="img/RGPD.png" class="r-stretch quarto-figure-center"></section>
 
 <section>
 <section id="registros-electrónicos-de-salud-ehr" class="title-slide slide level1 center">
@@ -946,7 +946,7 @@
 <section id="preprocesado-de-datos-médicos" class="title-slide slide level1 center">
 <h1>Preprocesado de datos médicos</h1>
 
-<img data-src="img/ProcesadoDeDatos1.png" class="r-stretch"><aside class="notes">
+<img data-src="img/ProcesadoDeDatos1.png" class="r-stretch quarto-figure-center"><aside class="notes">
 <p>Notes</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -960,21 +960,286 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="recopilación-de-datos" class="slide level2">
-<h2>Recopilación de Datos</h2>
+<section id="limpieza-de-datos" class="slide level2">
+<h2>Limpieza de datos</h2>
+<ul>
+<li>Eliminación de observaciones incompletas</li>
+<li>Imputación de valores</li>
+<li>Análisis de patrones de datos faltantes</li>
+<li>Uso de modelos predictivos</li>
+<li>Técnicas de imputación múltiple</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="normalización-de-variables-continuas" class="slide level2">
+<h2>Normalización de variables continuas</h2>
+<ul>
+<li>Las variables continuas pueden tener diferentes escalas y rangos de valores</li>
+<li>La normalización ayuda a mitigar este problema al transformar las variables para que estén en una escala similar</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="técnicas-de-normalización" class="slide level2">
+<h2>Técnicas de normalización</h2>
+<ul>
+<li>Datos con una media de 0 y desviación estándar 1</li>
+<li>Normalización min-max (0-1)</li>
+<li>Puede mejorar la convergencia</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>Es importante aplicar la misma transformación de normalización tanto al conjunto de entrenamiento como al conjunto de prueba para evitar sesgos en los datos.</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="integración-de-datos" class="slide level2">
+<h2>Integración de datos</h2>
+<ul>
+<li>Fuentes de Datos Diversas</li>
+<li>Resolución de inconsistencias</li>
+<li>Limpieza de Datos</li>
+<li>Gestión de Datos Temporales</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-ingeniería-de-características" class="slide level2">
+<h2>La ingeniería de características</h2>
+<ul>
+<li>Creación de Nuevas características</li>
+<li>Selección de Características Relevantes</li>
+</ul>
+<aside class="notes">
+<p>Por ejemplo el índice de masa corporal</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="anonimización-de-los-datos" class="slide level2">
+<h2>Anonimización de los datos</h2>
+<ul>
+<li><p>La anonimización es el proceso de eliminar o modificar datos personales de tal manera que ya no sea posible identificar a un individuo a partir de los datos.</p></li>
+<li><p>La anonimización está vinculada a lo que dicen las leyes de protección de datos en la UE (RGPD)</p></li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="técnicas-de-anonimización" class="slide level2">
+<h2>Técnicas de anonimización</h2>
+<ul>
+<li>Eliminación de identificadores directos</li>
+<li>Pseudonimización</li>
+<li>Enmascaramiento</li>
+<li>Agregación</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="consideraciones-al-elegir-una-técnica-de-anonimización" class="slide level2">
+<h2>Consideraciones al elegir una técnica de anonimización</h2>
+<ul>
+<li>El tipo de datos que se procesan</li>
+<li>El nivel de riesgo de reidentificación</li>
+<li>Los fines para los que se utilizarán los datos anonimizados</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-augmentation" class="slide level2">
+<h2><em>Data Augmentation</em></h2>
+<p>Es una técnica que consiste en crear nuevas muestras de datos a partir de datos existentes. Estas nuevas muestras se generan mediante la aplicación de transformaciones predefinidas a los datos originales</p>
+
+<img data-src="https://dawn.cs.stanford.edu/assets/img/2017-08-11-tanda/data_aug_basic.png" class="r-stretch"><aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ventajas-de-data-augmentation" class="slide level2">
+<h2>Ventajas de <em>Data Augmentation</em></h2>
+<ul>
+<li>Aumenta el tamaño del conjunto de datos</li>
+<li>Mejora la generalización del modelo</li>
+<li>Reduce el sesgo del modelo</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-augmentation-en-imágenes-médicas" class="slide level2">
+<h2><em>Data Augmentation</em> en imágenes médicas</h2>
+<ul>
+<li>Rotaciones</li>
+<li>Zoom</li>
+<li>Cambio de contraste</li>
+<li>Adición de ruido</li>
+<li>Simulación de artefactos</li>
+</ul>
+<aside class="notes">
+<p>Notes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-augmentation-en-señales-biomédicas" class="slide level2">
+<h2><em>Data Augmentation</em> en señales biomédicas</h2>
+<p>Como el Electrocardiograma o el Electroencefalograma</p>
+<ul>
+<li>Adición de ruido</li>
+<li>Cambio de escala</li>
+<li>Segmentación de señales</li>
+<li>Simulación de artefactos</li>
+</ul>
 </section></section>
+<section>
 <section id="vectorizaciones-embeddings" class="title-slide slide level1 center">
 <h1>Vectorizaciones (<em>Embeddings</em>)</h1>
 
 </section>
+<section id="ángulo-entre-dos-vectores" class="slide level2">
+<h2>Ángulo entre dos vectores</h2>
 
+<img data-src="https://www.mathsisfun.com/algebra/images/dot-product-ex2.gif" class="r-stretch"></section></section>
 <section id="radiómica-radiomics" class="title-slide slide level1 center">
 <h1>Radiómica (<em>Radiomics</em>)</h1>
+
+</section>
+
+<section>
+<section id="estándar-dicom" class="title-slide slide level1 center">
+<h1>Estándar DICOM</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 
 <img src="img/logoudl.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://cv.udl.cat/portal/site/100794-2324/tool/3d5c2c81-a50b-43ce-a0bf-ecbfd152350b">IAMED</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -1237,12 +1502,12 @@
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Copiado");
         let tooltip;
         if (window.bootstrap) {
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
+          button.setAttribute("data-bs-title", "Copiado");
           tooltip = new bootstrap.Tooltip(button, 
             { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
