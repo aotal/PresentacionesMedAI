@@ -37,32 +37,56 @@ Notes
 
 ![](img/Intro1.jpg){fig-align="center"}
 
+::: notes
+Notes
+:::
 
 ## Machine learning
 
 ![](img/Intro2.jpg){fig-align="center"}
 
+::: notes
+Notes
+:::
 
 ## Problema con los datos
 
 ![](img/Intro3.jpg){fig-align="center"}
 
+::: notes
+Notes
+:::
 
 # Clasificación de los datos
 
 ## Por tipos de datos
 
--   **Datos estructurados**: Datos organizados en tablas o matrices, como datos numéricos en
-una hoja de cálculo.
--   **Datos no estructurados**: Datos que no tienen una forma predefinida de organización,
-como texto libre, imágenes, audio o video.
--   **Datos semiestructurados**: Datos que tienen alguna estructura pero no encajan perfectamente
-en un formato tabular, como archivos XML o JSON.
+::: columns
+::: {.column width="50%" }
+
+-   Datos estructurados
+-   Datos no estructurados
+-   Datos semiestructurados
+
+
+:::
+
+::: {.column width="50%"}
+![](img/TiposDatos.jpg){fig-align="right"}
+
+
+:::
+:::
+
+
+::: notes
+Notes
+:::
 
 ## Datos estructurados
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="50%" }
 
 ```{python}
 import pandas as pd
@@ -74,11 +98,103 @@ tb
 :::
 
 ::: {.column width="50%"}
-![](img/DatosEstructurados1.jpg)
+![](img/DatosEstructurados1.jpg){fig-align="right"}
 
 
 :::
 :::
+
+
+::: notes
+Notes
+:::
+
+## Ejemplos de datos estructurados
+
+-   Registros Electrónicos de Salud
+-   Datos de Laboratorio Clínico
+
+
+## Datos no estructurados
+
+::: columns
+::: {.column width="50%"}
+
+-   Texto
+-   Imágenes
+-   Audio
+-   Video
+-   ...
+
+:::
+
+::: {.column width="50%"}
+![](img/DatosNoEstructurados1.jpg)
+
+
+:::
+:::
+
+
+
+::: notes
+Notes
+:::
+
+
+## Datos semiestructurados
+
+::: columns
+::: {.column width="50%"}
+![](https://www.diegocalvo.es/wp-content/uploads/2017/11/datos_semiestructurados.png)
+
+
+
+:::
+
+::: {.column width="50%"}
+![](https://www.dicomstandard.org/images/librariesprovider2/default-album/dicom-logo.jpg?sfvrsn=7e5f288b_2)
+
+
+:::
+:::
+
+
+
+::: notes
+Notes
+:::
+
+
+## Por naturaleza de los datos
+
+- Categóricos
+- Numéricos
+- Temporales
+- Espaciales
+  
+::: notes
+Notes
+:::
+
+## Por granularidad de los datos
+
+- **Datos a nivel de instancia**: Datos individuales que representan observaciones o eventos
+específicos, como registros de pacientes o imágenes médicas.
+- **Datos a nivel de atributo**: Datos que representan características o atributos de las instancias,
+como la edad, el peso o los síntomas clínicos.
+
+::: notes
+Notes
+:::
+
+## Fuente de los datos
+
+- **Datos primarios**: Datos recopilados directamente de la fuente original, como registros
+médicos electrónicos (EHR) o resultados de pruebas de laboratorio.
+
+- **Datos secundarios**: Datos que han sido recopilados o procesados por terceros, como
+conjuntos de datos disponibles en repositorios públicos o bases de datos comerciales.
 
 
 # Privacidad y confidencialidad
