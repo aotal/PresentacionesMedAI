@@ -246,7 +246,7 @@ La anotación de datos es el proceso de atribución o etiquetado de datos para a
 ::: {.column width="50%"}
 ![](https://www.shaip.com/wp-content/uploads/2021/08/page-8-1.jpg)
 
-
+[VGG](https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html)
 :::
 :::
 
@@ -263,6 +263,8 @@ La anotación de datos es el proceso de atribución o etiquetado de datos para a
 ![](https://www.shaip.com/wp-content/uploads/2022/02/page-3.jpg)
 
 
+
+
 ## Anotación de texto
 
 ::: columns
@@ -271,7 +273,7 @@ La anotación de datos es el proceso de atribución o etiquetado de datos para a
 - Intención
 - Opinión
 
-
+[tabula](http://tabula.ondata.it/)
 
 :::
 
@@ -335,6 +337,33 @@ Notes
 - Gestión de Medicamentos
   
 - Integración de Imágenes Médicas (PACS)
+
+
+::: notes
+Notes
+:::
+
+## SAP 1
+
+![](img/SAP_1.png)
+
+
+::: notes
+Notes
+:::
+
+## SAP 2
+
+![](img/SAP_2.png)
+
+
+::: notes
+Notes
+:::
+
+## SAP 3
+
+![](img/SAP_3.png)
 
 
 ::: notes
@@ -496,7 +525,7 @@ Como el Electrocardiograma o el Electroencefalograma
 
 ## Práctica
 
-https://colab.research.google.com/drive/1zR8uurhFbOVdVFNsrgWqiOPvpfHq82MK?usp=sharing
+<img data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" src="https://colab.research.google.com/drive/17hAP1ePCEOxDMREzNHQi1SwT0FYNa42n?usp=sharing">
 
 # Radiómica (*Radiomics*)
 
