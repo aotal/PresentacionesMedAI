@@ -370,6 +370,15 @@ Notes
 Notes
 :::
 
+## ARIA
+
+![](img/ARIA.PNG)
+
+
+::: notes
+Notes
+:::
+
 # Preprocesado de datos médicos
 
 ![](img/ProcesadoDeDatos1.png){fig-align="center"}
